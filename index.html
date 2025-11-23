@@ -1,83 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cypher — Decode Playground</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand" data-i18n="app_title">Cypher</div>
-    <div class="controls">
-      <label class="lang-switch">
-        <select id="langSelect" aria-label="Language switch">
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-          <option value="pt">Português</option>
-        </select>
-      </label>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="panel card" id="leftPanel">
-      <h2 data-i18n="input_title">Input</h2>
-
-      <label class="field">
-        <span data-i18n="cipher_label">Cipher</span>
-        <select id="cipherSelect" aria-label="Cipher selector">
-          <option value="auto">Auto-detect (guess)</option>
-          <option value="caesar">Caesar</option>
-          <option value="rot13">ROT13</option>
-          <option value="vigenere">Vigenère</option>
-          <option value="atbash">Atbash</option>
-          <option value="affine">Affine</option>
-          <option value="railfence">Rail Fence</option>
-          <option value="base64">Base64</option>
-          <option value="custom">Other / Custom</option>
-        </select>
-      </label>
-
-      <label class="field" id="keyField">
-        <span data-i18n="key_label">Key / Shift</span>
-        <input id="keyInput" type="text" placeholder="3 / SECRET / a,b" />
-        <small class="hint" id="keyHint" data-i18n="key_hint">Examples: Caesar shift = 3, Vigenère = SECRET, Affine = 5,8 (a,b)</small>
-      </label>
-
-      <label class="field">
-        <span data-i18n="text_label">Text</span>
-        <textarea id="textInput" placeholder="" rows="8"></textarea>
-      </label>
-
-      <div class="file-row">
-        <input id="fileInput" type="file" accept=".txt" />
-        <button id="decodeBtn" class="btn primary" data-i18n="decode_btn">Decode</button>
-      </div>
-
-      <div class="hint" id="hintText" data-i18n="hint_text">Tip: paste text or upload a .txt file.</div>
-    </section>
-
-    <section class="panel card" id="rightPanel">
-      <h2 data-i18n="output_title">Output</h2>
-
-      <div id="result" class="result animated-card" aria-live="polite"></div>
-
-      <div class="actions">
-        <button id="copyBtn" class="btn" data-i18n="copy_btn">Copy</button>
-        <button id="downloadBtn" class="btn" data-i18n="download_btn">Download</button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer card">
-    <div data-i18n="footer_text">An easier interface for Cypher Decoding — Prototype</div>
-  </footer>
-
-  <!-- Ciphers module (works in browser and node for tests) -->
-  <script src="ciphers.js"></script>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cypher | Decode the Unknown</title>
+    <meta name="description" content="A beautiful and intuitive interface for decoding and encoding ciphers." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
