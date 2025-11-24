@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-rose-50 text-rose-950 antialiased;
+  }
+}
+
+/* Custom scrollbar for textareas */
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+textarea::-webkit-scrollbar-track {
+  @apply bg-rose-100 rounded;
+}
+textarea::-webkit-scrollbar-thumb {
+  @apply bg-rose-300 rounded hover:bg-rose-400 transition-colors;
+}
